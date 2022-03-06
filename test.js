@@ -2,10 +2,6 @@ const { Builder, By, Key } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const assert = require("assert");
 
-function sleep(ms) {
-	return new Promise(ok => setTimeout(ok, ms))
-}
-
 async function demo() {
 	const chromeOptions = new chrome.Options()
 	chromeOptions.addArguments('--headless')
@@ -54,7 +50,6 @@ async function demo() {
 
 		// Failing test
 		assert.strictEqual(titreForge, "Example");
-
 	} finally {
 		console.log("Closing the browser...");
 		await driver.quit();
