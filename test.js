@@ -4,7 +4,7 @@ const assert = require("assert");
 
 async function demo() {
 	const chromeOptions = new chrome.Options()
-	chromeOptions.addArguments('--headless --no-sandbox')
+	chromeOptions.addArguments('--headless', '--no-sandbox')
 
 	const driver = await new Builder()
 			.forBrowser("chrome")
